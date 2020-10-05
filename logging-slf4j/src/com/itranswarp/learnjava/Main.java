@@ -19,7 +19,7 @@ public class Main {
 		try {
 			"".getBytes("invalidCharsetName");
 		} catch (UnsupportedEncodingException e) {
-			logger.error("error=====", e);
+			logger.error("info, hello {}", "6666");
 		}
 		logger.info("Process end.");
 	}
