@@ -1,2 +1,2 @@
 # learn-java
-学习java时跟着书敲的代码
+学习Java 做的demo。不同分支对应不同内容。
