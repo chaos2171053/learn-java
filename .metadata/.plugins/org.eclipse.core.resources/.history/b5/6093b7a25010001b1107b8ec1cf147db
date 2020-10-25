@@ -1,0 +1,11 @@
+package com.itranswarp.learnjava;
+
+public class ChaosCar extends RefinedCar {
+
+	@Override
+	public String getBrand() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

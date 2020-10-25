@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.Const"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Field"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Method"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="com.itranswarp.learnjava.bridge.RefinedCar"/>
+    <fullyQualifiedTypeName name="com.itranswarp.learnjava.bridge.ChaosEngine"/>
+    <fullyQualifiedTypeName name="sun.nio.cs.DelegatableDecoder"/>
+</qualifiedTypeNameHistroy>

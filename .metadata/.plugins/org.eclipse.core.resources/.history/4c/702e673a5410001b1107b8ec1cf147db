@@ -1,0 +1,18 @@
+package com.itranswarp.learnjava.node.decorator;
+
+import com.itranswarp.learnjava.node.NodeDecorator;
+import com.itranswarp.learnjava.node.TextNode;
+
+public class DelDecorator extends NodeDecorator {
+
+	protected DelDecorator(TextNode target) {
+		super(target);
+	}
+
+	@Override
+	public String getText() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

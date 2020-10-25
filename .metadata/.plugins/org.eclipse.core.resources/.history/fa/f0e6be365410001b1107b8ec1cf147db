@@ -1,0 +1,5 @@
+package com.itranswarp.learnjava.node.decorator;
+
+public class DelDecorator {
+
+}
