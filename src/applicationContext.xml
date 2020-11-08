@@ -15,6 +15,14 @@
     	class="com.chaos.spring.demo.TrackCoach" >
     	<constructor-arg ref="myFortuneService"></constructor-arg>
     </bean>
+    <bean id="myCricketCoach"
+    	class="com.chaos.spring.demo.CricketCoach">
+    	<!-- set up setter injection -->
+    	<property name="fortuneService" ref="myFortuneService"/>
+    	<!-- inject literal values -->
+    	<property name="emailAddress" value="chaos2171053@gmail.com"/>
+    	<property name="team" value="Lakers"/>
+    </bean>
 </beans>
 
 
