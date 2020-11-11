@@ -13,7 +13,7 @@ public class BeanScopeDemoApp {
 
 		Coach alCoach = context.getBean("myCoach", Coach.class);
 
-		// check if they are the sam
+		// check if they are the same
 		Boolean result = (theCoach == alCoach);
 
 		System.out.println("\nPointing to the same object " + result);
