@@ -3,10 +3,12 @@ package com.chaos.springdemo;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HappyFortuneService implements FortuneService {
+public class DatabaseFortuneService implements FortuneService {
+
 	@Override
 	public String getFortune() {
-		return "HappyFortuneService :Today is you lucky day";
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

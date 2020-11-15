@@ -1,16 +1,22 @@
 package com.chaos.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
 	@Autowired
+	@Qualifier("randomFortuneService")
 	private FortuneService fortuneService;
 
-	public TennisCoach(FortuneService thefortuneService) {
+	public TennisCoach() {
 		System.out.println(">> TennisCoach inside default constuctor");
 	}
+
+//	public TennisCoach(FortuneService thefortuneService) {
+//		System.out.println(">> TennisCoach inside default constuctor");
+//	}
 
 	// define a setter method
 	@Autowired
