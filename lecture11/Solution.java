@@ -1,14 +1,34 @@
+import java.util.ArrayList;
+
 /* 
-正确答案：d = 5.5
+字符串列表数组
 */
 
 public class Solution {
     public static void main(String[] args) {
-        int a = 5;
-        int b = 4;
-        int c = 3;
-        int e = 2;
-        double d = a + b / c / e;
-        System.out.println(d);
+        ArrayList<String>[] arrayOfStringList = createList();
+        printList(arrayOfStringList);
+    }
+
+    public static ArrayList<String>[] createList() {
+        ArrayList<String>[] result = (ArrayList<String>[]) new ArrayList[3];
+
+        result[0] = new ArrayList<String>();
+        result[1] = new ArrayList<String>();
+        result[2] = new ArrayList<String>();
+
+        result[0].add("Mama");
+        result[1].add("Mila");
+        result[2].add("Ramu");
+
+        return result;
+    }
+
+    public static void printList(ArrayList<String>[] arrayOfStringList) {
+        for (ArrayList<String> list : arrayOfStringList) {
+            for (String s : list) {
+                System.out.println(s);
+            }
+        }
     }
 }
