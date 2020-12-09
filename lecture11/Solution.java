@@ -1,30 +1,35 @@
 public class Solution {
-    public static void main(String[] args) throws Exception {
-        method1();
+    public static void main(String[] args) {
+        try {
+            handleExceptions(new Solution());
+        } catch (Exception e) {
+            printStack(e);
+        }
+
     }
 
-    public static String method1() {
-        method2();
-        return Thread.currentThread().getStackTrace()[2].getMethodName();
+    public static void handleExceptions(Solution obj) {
+        obj.method1();
+        obj.method2();
+        obj.method3();
     }
 
-    public static String method2() {
-        method3();
-        return Thread.currentThread().getStackTrace()[2].getMethodName();
+    public static void printStack(Throwable throwable) {
+        System.out.println(throwable);
+        for (StackTraceElement element : throwable.getStackTrace()) {
+            System.out.println(element);
+        }
     }
 
-    public static String method3() {
-        method4();
-        return Thread.currentThread().getStackTrace()[2].getMethodName();
+    public void method1() {
+        throw new NullPointerException();
     }
 
-    public static String method4() {
-        method5();
-        return Thread.currentThread().getStackTrace()[2].getMethodName();
+    public void method2() {
+        throw new IndexOutOfBoundsException();
     }
 
-    public static String method5() {
-        return Thread.currentThread().getStackTrace()[2].getMethodName();
+    public void method3() {
+        throw new NumberFormatException();
     }
-
 }
