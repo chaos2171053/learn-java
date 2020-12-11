@@ -1,35 +1,27 @@
-import java.util.Arrays;
+// •	程序应在屏幕上显示文本。
+// •	Whale 类必须继承 Cow 类。
+// •	Whale 类必须重写 getName() 方法。
+// •	main() 方法必须调用 Cow 对象的 getName() 方法。
+// •	重写 Whale 类中的 getName 方法，从而使程序显示：“我不是奶牛。我是一条鲸鱼。”
+// •	main() 方法应显示调用 getName() 方法的结果。
 
 public class Solution {
 
-    public static void main(String[] args) throws Exception {
-        int[] data = new int[] { 1, 2, 3, 5, -2, -8, 0, 77, 5, 5 };
+    public static void main(String[] args) {
+        Cow cow = new Whale();
 
-        Pair<Integer, Integer> result = getMinimumAndMaximum(data);
-
-        System.out.println("最小值为 " + result.x);
-        System.out.println("最大值为 " + result.y);
+        System.out.println(cow.getName());
     }
 
-    public static Pair<Integer, Integer> getMinimumAndMaximum(int[] array) {
-        if (array == null || array.length == 0) {
-            return new Pair<Integer, Integer>(null, null);
+    public static class Cow {
+        public String getName() {
+            return "我是一头牛";
         }
-
-        // 在此编写你的代码
-        int min = Arrays.stream(array).min().getAsInt();
-        int max = Arrays.stream(array).max().getAsInt();
-
-        return new Pair<Integer, Integer>(min, max);
     }
 
-    public static class Pair<X, Y> {
-        public X x;
-        public Y y;
-
-        public Pair(X x, Y y) {
-            this.x = x;
-            this.y = y;
+    public static class Whale extends Cow {
+        public String getName() {
+            return "我不是奶牛。我是一条鲸鱼。";
         }
     }
 }
