@@ -1,8 +1,9 @@
 /* 
-•	程序不应该在屏幕上显示文本。
-•	Pet 类必须为 static。
 •	Pet 类必须为 abstract。
-•	Pet 类中只能包含一个名为 getName() 的方法。
+•	Dog 类不能为 abstract。
+•	Cat 类不能为 abstract。
+•	Dog 类必须实现 Pet 类的 abstract 方法。
+•	Cat 类必须实现 Pet 类的 abstract 方法。
 */
 
 public class Solution {
@@ -11,8 +12,36 @@ public class Solution {
     }
 
     public static abstract class Pet {
+        public abstract String getName();
+
+        public abstract Pet getChild();
+    }
+
+    public static class Cat extends Pet {
+
+        @Override
         public String getName() {
-            return "我是一只小猫";
+            return null;
+        }
+
+        @Override
+        public Solution.Pet getChild() {
+            return null;
+        }
+
+    }
+
+    public static class Dog extends Pet {
+
+        @Override
+        public String getName() {
+            return null;
+        }
+
+        @Override
+        public Solution.Pet getChild() {
+
+            return null;
         }
     }
 }
